@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Button"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem_cmp_button_v1"
+    trackingFeature="core-components:button:v1">
+    <content
+        granite:class="cmp-button__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <icon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:hideResource="{Boolean}true"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Icon identifier for displaying an icon in the button."
+                                                fieldLabel="Icon"
+                                                name="./icon"/>
+                                            <linkTargetBlank
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:orderBefore="icon"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                name="./linkTargetBlank"
+                                                text="Open link in new tab?"
+                                                uncheckedValue="false"
+                                                value="{Boolean}true"/>
+                                            <disabled
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:orderBefore="id"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Disabled"
+                                                name="./disabled">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <false
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="False"
+                                                        value="{Boolean}false"/>
+                                                    <true
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="True"
+                                                        value="{Boolean}true"/>
+                                                </items>
+                                            </disabled>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <XF
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Experience Fragment"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <sign-in-xf-path
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Sign In Experience Fragment"
+                                                fieldDescription="The Experience Fragment to display as a modal when the Sign In button is clicked"
+                                                rootPath="/content/experience-fragments"
+                                                name="./signInXfPath"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </XF>
+                </items>
+                
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
