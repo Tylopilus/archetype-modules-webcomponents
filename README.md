@@ -4,6 +4,19 @@ This is a project AEM-based applications. Divigates from the normal archetype by
 
 This repo features a basic shared-clientlib that offers some web-components which have been written in StencilJS. The clientlib has been added to the page-template and offers some corresponding Components to place them in AEM. Since stencil compiles to pure web-components no additional runtime is needed.
 
+Additionally a flag *onLoadMedia* has been added which deferes the loaded css and thus makes it non blocking, resulting in a much fast page load. This comes at a cost that no style is loaded on initial paint. To circumvent this critical.css would be needed to be included on every page for the staging area.
+
+When you take a look a the demo-page's source you can notice the following to lines:
+in the <head>
+```html
+<link rel="stylesheet" href="/etc.clientlibs/sharedcomps/clientlibs/clientlib-webcomps.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" media="none" onload="media='all'">
+```
+in the body
+```html
+<script src="/etc.clientlibs/sharedcomps/clientlibs/clientlib-webcomps.lc-cbb5c1729adcc14cd9a33d86cfb14681-lc.min.js" type="module"></script>
+```
+
+
 
 For a demo visit: http://localhost:4502/editor.html/content/test/us/en.html
 
