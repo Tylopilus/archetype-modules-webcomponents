@@ -1,8 +1,9 @@
-# Sample AEM project with es6 modules and web components
+# Sample AEM project with es6 modules and web components powered by Stencil
 
 This is a project AEM-based applications. Divigates from the normal archetype by introducing the possibilities to include clientlibs as es6 modules by providing a module-flag. The implementation is based on the [aemvite-project](https://github.com/aem-vite/aem-vite).
 
-This repo features a basic shared-clientlib that offers some web-components which have been written in StencilJS. The clientlib has been added to the page-template and offers some corresponding Components to place them in AEM.
+This repo features a basic shared-clientlib that offers some web-components which have been written in StencilJS. The clientlib has been added to the page-template and offers some corresponding Components to place them in AEM. Since stencil compiles to pure web-components no additional runtime is needed.
+
 
 For a demo visit: http://localhost:4502/editor.html/content/test/us/en.html
 
