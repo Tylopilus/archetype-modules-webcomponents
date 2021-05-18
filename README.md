@@ -1,20 +1,24 @@
-# Sample AEM project template
+# Sample AEM project with es6 modules and web components
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+This is a project AEM-based applications. Divigates from the normal archetype by introducing the possibilities to include clientlibs as es6 modules by providing a module-flag. The implementation is based on the [aemvite-project](https://github.com/aem-vite/aem-vite).
+
+This repo features a basic shared-clientlib that offers some web-components which have been written in StencilJS. The clientlib has been added to the page-template and offers some corresponding Components to place them in AEM.
+
+For a demo visit: http://localhost:4502/editor.html/content/test/us/en.html
 
 ## Modules
 
 The main parts of the template are:
 
-* core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
-* it.tests: Java based integration tests
-* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, and templates
-* ui.content: contains sample content using the components from the ui.apps
-* ui.config: contains runmode specific OSGi configs for the project
-* ui.frontend: an optional dedicated front-end build mechanism (Angular, React or general Webpack project)
-* ui.tests: Selenium based UI tests
-* all: a single content package that embeds all of the compiled modules (bundles and content packages) including any vendor dependencies
-* analyse: this module runs analysis on the project which provides additional validation for deploying into AEMaaCS
+- core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
+- it.tests: Java based integration tests
+- ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, and templates
+- ui.content: contains sample content using the components from the ui.apps
+- ui.config: contains runmode specific OSGi configs for the project
+- ui.frontend: an optional dedicated front-end build mechanism (Angular, React or general Webpack project)
+- ui.tests: Selenium based UI tests
+- all: a single content package that embeds all of the compiled modules (bundles and content packages) including any vendor dependencies
+- analyse: this module runs analysis on the project which provides additional validation for deploying into AEMaaCS
 
 ## How to build
 
@@ -68,14 +72,14 @@ AEM. If you want to point the integration tests to different AEM author and
 publish instances, you can use the following system properties via Maven's `-D`
 flag.
 
-| Property | Description | Default value |
-| --- | --- | --- |
-| `it.author.url` | URL of the author instance | `http://localhost:4502` |
-| `it.author.user` | Admin user for the author instance | `admin` |
-| `it.author.password` | Password of the admin user for the author instance | `admin` |
-| `it.publish.url` | URL of the publish instance | `http://localhost:4503` |
-| `it.publish.user` | Admin user for the publish instance | `admin` |
-| `it.publish.password` | Password of the admin user for the publish instance | `admin` |
+| Property              | Description                                         | Default value           |
+| --------------------- | --------------------------------------------------- | ----------------------- |
+| `it.author.url`       | URL of the author instance                          | `http://localhost:4502` |
+| `it.author.user`      | Admin user for the author instance                  | `admin`                 |
+| `it.author.password`  | Password of the admin user for the author instance  | `admin`                 |
+| `it.publish.url`      | URL of the publish instance                         | `http://localhost:4503` |
+| `it.publish.user`     | Admin user for the publish instance                 | `admin`                 |
+| `it.publish.password` | Password of the admin user for the publish instance | `admin`                 |
 
 The integration tests in this archetype use the [AEM Testing
 Clients](https://github.com/adobe/aem-testing-clients) and showcase some
@@ -95,15 +99,16 @@ can be found here https://github.com/adobe/aemanalyser-maven-plugin
 
 ### UI tests
 
-They will test the UI layer of your AEM application using Selenium technology. 
+They will test the UI layer of your AEM application using Selenium technology.
 
 To run them locally:
 
     mvn clean verify -Pui-tests-local-execution
 
 This default command requires:
-* an AEM author instance available at http://localhost:4502 (with the whole project built and deployed on it, see `How to build` section above)
-* Chrome browser installed at default location
+
+- an AEM author instance available at http://localhost:4502 (with the whole project built and deployed on it, see `How to build` section above)
+- Chrome browser installed at default location
 
 Check README file in `ui.tests` module for more details.
 
