@@ -91,6 +91,10 @@ yarn.lock
 build/
 dist/
 
+# Stencil
+dist/
+www/
+
 # Frontend Maven Plugin
 node/
 

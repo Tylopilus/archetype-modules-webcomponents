@@ -4,8 +4,4 @@
     categories="[share.webcomps]"
     cssProcessor="[default:none,min:none]"
     jsProcessor="[default:none,min:none]"
-    allowProxy="{Boolean}true"
-    esModule="{Boolean}true"
-    module="{Boolean}true"
-    onLoadMedia="{Boolean}true"
-    />
+    allowProxy="{Boolean}true"/>
