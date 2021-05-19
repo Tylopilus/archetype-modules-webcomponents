@@ -3,7 +3,7 @@ import { sass } from '@stencil/sass';
 import copy from 'rollup-plugin-copy';
 
 export const config: Config = {
-  namespace: 'media-scroller',
+  namespace: 'aem-shared-comps',
   outputTargets: [
     {
       type: 'dist',

@@ -1,1 +1,0 @@
-import{r as s,h as o,H as r}from"./p-643cfe3b.js";const t=class{constructor(o){s(this,o)}render(){return console.log(this.item),o(r,null,o("slot",null))}};t.style=":host{display:block}";export{t as shared_item}

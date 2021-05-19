@@ -1,1 +1,1 @@
-export * from './clientlib-webcomps/resources/js/media-scroller.esm.js';
+export * from './clientlib-webcomps/resources/js/aem-shared-comps.esm.js';

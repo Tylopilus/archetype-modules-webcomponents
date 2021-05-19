@@ -1,1 +1,0 @@
-import{r as s,h as a,H as o}from"./p-643cfe3b.js";const r=class{constructor(a){s(this,a)}render(){return a(o,null,a("div",{class:"shared-modal-wrapper"},a("div",{class:"shared-modal--content"})))}};r.style=":host{display:block;position:absolute;top:0;left:0;width:40%;margin:0 auto;background:red;height:100vh}";export{r as shared_modal}

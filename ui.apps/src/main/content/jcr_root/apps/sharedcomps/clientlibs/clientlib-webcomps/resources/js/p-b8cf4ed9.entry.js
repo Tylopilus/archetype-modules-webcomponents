@@ -1,1 +1,0 @@
-import{r as s,h as t,H as r,a as e}from"./p-643cfe3b.js";const o=class{constructor(t){s(this,t)}render(){return this.el.addEventListener("click",(()=>{console.log("hai")})),t(r,null,t("h1",null,this.text))}get el(){return e(this)}};o.style=":host{display:block}";export{o as teaser_comp}
