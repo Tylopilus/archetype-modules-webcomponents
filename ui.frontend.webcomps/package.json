@@ -20,7 +20,8 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "prod": "rm -rf www && stencil build --docs && clientlib --verbose"
+    "prod": "rm -rf www && stencil build --docs && clientlib --verbose",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@stencil/core": "^2.0.1",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@stencil/sass": "^1.4.1",
     "@stencil/store": "^1.4.1",
-    "aem-clientlib-generator": "^1.7.5"
+    "aem-clientlib-generator": "^1.7.5",
+    "patch-package": "^6.4.7"
   }
 }
