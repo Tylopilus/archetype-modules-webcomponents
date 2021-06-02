@@ -35,6 +35,7 @@
                     <filters>
                         <!-- /apps root -->
                         <filter><root>/apps</root></filter>
+                        <filter><root>/apps/sharedcomps</root></filter>
                         <filter><root>/apps/test</root></filter>
 
                         <!-- Common overlay roots -->

@@ -21,6 +21,7 @@ export const config: Config = {
       baseUrl: 'http://localhost',
       buildDir: './clientlib-webcomps/resources/js',
       serviceWorker: null, // disable service workers
+      empty: true,
     },
   ],
   plugins: [sass()],
@@ -30,6 +31,8 @@ export const config: Config = {
         targets: [
           { src: 'loader/loader.js', dest: 'www/clientlib-webcomps/js' },
         ],
+        copyOnce: true,
+        verbose: true,
       }),
     ],
   },
