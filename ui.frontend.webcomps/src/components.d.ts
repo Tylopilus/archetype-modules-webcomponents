@@ -23,6 +23,7 @@ export namespace Components {
     interface MyInput {
     }
     interface MyTictactoe {
+        "reset": string;
     }
     interface SharedButton {
         "name": string;
@@ -116,6 +117,7 @@ declare namespace LocalJSX {
     interface MyInput {
     }
     interface MyTictactoe {
+        "reset"?: string;
     }
     interface SharedButton {
         "name"?: string;

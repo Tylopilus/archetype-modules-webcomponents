@@ -14,13 +14,14 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "rm -rf www && stencil build --docs",
     "build:ssg": "stencil build --prerender",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "prod": "rm -rf www && stencil build --docs && clientlib --verbose",
+    "clientlib": "clientlib --verbose",
     "postinstall": "patch-package"
   },
   "dependencies": {

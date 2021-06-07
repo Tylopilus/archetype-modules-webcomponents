@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'my-tictactoe',
@@ -6,6 +6,8 @@ import { Component, h, State } from '@stencil/core';
   shadow: true,
 })
 export class MyTictactoe {
+  @Prop()
+  reset: string = 'reset';
   @State()
   board: undefined | string[][] = undefined;
 
@@ -99,10 +101,11 @@ export class MyTictactoe {
     this.updateBoard(this.board, row, col);
     this.turn = this.turn === 'X' ? 'O' : 'X';
   };
+
   render() {
     return (
       <div class="board">
-        <button onClick={this.resetBoard}>reset</button>
+        <button onClick={this.resetBoard}>{this.reset}</button>
         {this.winner && <span class="winner">Winner is: {this.winner}</span>}
         <table>
           <tbody>
